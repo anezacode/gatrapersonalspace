@@ -1,0 +1,330 @@
+img, br, input, button, .tag {
+    user-select: none;
+}
+
+/* Scrollbar styling for mobile */
+.overflow-y-auto::-webkit-scrollbar {
+    width: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.5);
+    border-radius: 12px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+    background: rgba(156, 163, 175, 0.7);
+}
+
+.bg-open {
+    animation: opening 1s linear forwards;
+}
+
+.anim-open1 {
+    animation: opening 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.anim-open2 {
+    animation: opening 1s linear forwards;
+    animation-delay: 0.7s;
+    opacity: 0;
+}
+
+.anim-open3 {
+    animation: opening 1s linear forwards;
+    animation-delay: 0.9s;
+    opacity: 0;
+}
+
+.anim-open4 {
+    animation: opening 1s linear forwards;
+    animation-delay: 1.1s;
+    opacity: 0;
+}
+
+.anim-open5 {
+    animation: opening 1s linear forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+}
+
+.anim-open6 {
+    animation: opening 1s linear forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+.anim-open7 {
+    animation: opening 1s linear forwards;
+    animation-delay: 1.7s;
+    opacity: 0;
+}
+
+.anim-open8 {
+    animation: opening 1s linear forwards;
+    animation-delay: 1.9s;
+    opacity: 0;
+}
+
+@keyframes opening {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.bgs {
+    animation: zoom linear;
+    animation-timeline: scroll();
+    opacity: 1;
+    scale: 1 1;
+}
+
+
+@keyframes zoom {
+    50% {scale: 2 2;}
+    100% { scale: 2 2; opacity: 0.5;}
+}
+
+.nbr {
+    animation: show linear;
+    animation-timeline: scroll();
+    margin-top: -60px;
+}
+
+@keyframes show {
+    16% { margin-top: 0; }
+    100% { margin-top: 0; }
+}
+
+.mains {
+    animation: mains linear;
+    animation-timeline: scroll();
+    filter: blur(0);
+    opacity: 1;
+    scale: 1 1;
+}
+
+.abouts {
+    animation: abouts linear;
+    animation-timeline: scroll();
+    filter: blur(5px);
+    opacity: 0;
+    scale: 0.9 0.9;
+}
+
+.projects {
+    animation: projects linear;
+    animation-timeline: scroll();
+    filter: blur(5px);
+    opacity: 0;
+    scale: 0.9 0.9;
+}
+
+.contacts {
+    animation: contacts linear;
+    animation-timeline: scroll();
+    filter: blur(5px);
+    opacity: 0;
+    scale: 0.9 0.9;
+}
+
+@keyframes mains {
+    0% { 
+        filter: blur(0);
+        opacity: 1;
+        scale: 1 1;
+    }
+    5% { 
+        filter: blur(0);
+        opacity: 1;
+        scale: 1 1;
+    }
+    24% { 
+        filter: blur(5px);
+        opacity: 0;
+        scale: 0.9 0.9;
+    }
+    100% { 
+        filter: blur(5px);
+        opacity: 0;
+        scale: 0.9 0.9;
+    }
+}
+
+@keyframes abouts {
+    5% { 
+        filter: blur(5px);
+        opacity: 0;
+        scale: 0.9 0.9;
+    }
+    24% { 
+        filter: blur(0);
+        opacity: 1;
+        scale: 1 1;
+    }
+    37% { 
+        filter: blur(0);
+        opacity: 1;
+        scale: 1 1;
+    }
+    62% { 
+        filter: blur(5px);
+        opacity: 0;
+        scale: 0.9 0.9;
+    }
+    100% { 
+        filter: blur(5px);
+        opacity: 0;
+        scale: 0.9 0.9;
+    }
+}
+
+@keyframes projects {
+    37% { 
+        filter: blur(5px);
+        opacity: 0;
+        scale: 0.9 0.9;
+    }
+    62% { 
+        filter: blur(0);
+        opacity: 1;
+        scale: 1 1;
+    }
+    71% { 
+        filter: blur(0);
+        opacity: 1;
+        scale: 1 1;
+    }
+    89% { 
+        filter: blur(5px);
+        opacity: 0;
+        scale: 0.9 0.9;
+    }
+    100% { 
+        filter: blur(5px);
+        opacity: 0;
+        scale: 0.9 0.9;
+    }
+}
+
+@keyframes contacts {
+    71% { 
+        filter: blur(5px);
+        opacity: 0;
+        scale: 0.9 0.9;
+    }
+    89% { 
+        filter: blur(0);
+        opacity: 1;
+        scale: 1 1;
+    }
+    100% { 
+        filter: blur(0);
+        opacity: 1;
+        scale: 1 1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    @keyframes mains {
+        0% { 
+            filter: blur(0);
+            opacity: 1;
+            scale: 1 1;
+        }
+        5% { 
+            filter: blur(0);
+            opacity: 1;
+            scale: 1 1;
+        }
+        16% { 
+            filter: blur(5px);
+            opacity: 0;
+            scale: 0.9 0.9;
+        }
+        100% { 
+            filter: blur(5px);
+            opacity: 0;
+            scale: 0.9 0.9;
+        }
+    }
+    
+    @keyframes abouts {
+        5% { 
+            filter: blur(5px);
+            opacity: 0;
+            scale: 0.9 0.9;
+        }
+        16% { 
+            filter: blur(0);
+            opacity: 1;
+            scale: 1 1;
+        }
+        44% { 
+            filter: blur(0);
+            opacity: 1;
+            scale: 1 1;
+        }
+        53% { 
+            filter: blur(5px);
+            opacity: 0;
+            scale: 0.9 0.9;
+        }
+        100% { 
+            filter: blur(5px);
+            opacity: 0;
+            scale: 0.9 0.9;
+        }
+    }
+    
+    @keyframes projects {
+        44% { 
+            filter: blur(5px);
+            opacity: 0;
+            scale: 0.9 0.9;
+        }
+        53% { 
+            filter: blur(0);
+            opacity: 1;
+            scale: 1 1;
+        }
+        84% { 
+            filter: blur(0);
+            opacity: 1;
+            scale: 1 1;
+        }
+        92% { 
+            filter: blur(5px);
+            opacity: 0;
+            scale: 0.9 0.9;
+        }
+        100% { 
+            filter: blur(5px);
+            opacity: 0;
+            scale: 0.9 0.9;
+        }
+    }
+    
+    @keyframes contacts {
+        84% { 
+            filter: blur(5px);
+            opacity: 0;
+            scale: 0.9 0.9;
+        }
+        92% { 
+            filter: blur(0);
+            opacity: 1;
+            scale: 1 1;
+        }
+        100% { 
+            filter: blur(0);
+            opacity: 1;
+            scale: 1 1;
+        }
+    }    
+}
