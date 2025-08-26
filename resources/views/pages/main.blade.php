@@ -239,7 +239,7 @@
     </form>
 @else
     <section class="fixed bottom-10 flex justify-center text-center w-full">
-        <a href="{{ route('admin') }}" class="px-4 py-2 bg-white hover:bg-white/75 text-black rounded-md font-bold">Dashboard Admin</a>
+        <a href="{{ route('admin') }}" class="px-4 py-2 bg-white/90 hover:bg-white/75 text-black rounded-md font-bold">Dashboard Admin</a>
     </section>
 @endif
 @endsection
