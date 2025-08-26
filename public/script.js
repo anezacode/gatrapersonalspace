@@ -1,4 +1,11 @@
 const keyword = 'admin';
+
+const panel = document.getElementById("panel");
+panel.removeAttribute('disabled');
+
+const submit = document.getElementById("send");
+submit.removeAttribute('disabled');
+
 // SEARCH BAR
 function searchProject() {
     const input = document.querySelector('#project_search').value.toLowerCase();
@@ -40,9 +47,6 @@ const icon = `
         <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
     </svg>
 `;
-        
-const submit = document.getElementById("send");
-submit.removeAttribute('disabled');
 
 let isSending = false;
 

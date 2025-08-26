@@ -20,7 +20,7 @@
         <div class="w-full max-w-3/4 flex items-center justify-between">
             <div class="w-full flex flex-col gap-4">
                 <h2 class="text-xl font-medium">Website Preview</h2>
-                <iframe src="{{ route('main') }}" frameborder="0" height="800" style="zoom: 0.75" class="w-full border border-white"></iframe>
+                <iframe sandbox src="{{ route('main') }}" frameborder="0" height="800" style="zoom: 0.75" class="w-full border border-white"></iframe>
             </div>
         </div>
     </section>
