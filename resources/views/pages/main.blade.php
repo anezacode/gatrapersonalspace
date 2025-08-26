@@ -163,7 +163,7 @@
                             @forelse ($projects->slice(0, 3)->sortByDesc('views') as $pj)
                                 <tr>
                                     <td>
-                                        <h3 class="before:content-['#'] text-white text-6xl me-4 mb-4">{{ $loop->iteration }}</h3>
+                                        <h3 class="before:content-['#'] text-white text-6xl me-4 mb-4 tag">{{ $loop->iteration }}</h3>
                                     </td>
                                     <td>
                                         <p class="text-white/90 mb-4">{{ $pj->title }}</p>
@@ -172,7 +172,7 @@
                             @empty
                                 <tr>
                                     <td>
-                                        <h3 class="before:content-['#'] text-white text-6xl me-4 mb-4">1</h3>
+                                        <h3 class="before:content-['#'] text-white text-6xl me-4 mb-4 tag">1</h3>
                                     </td>
                                     <td>
                                         <p class="text-white/90 mb-4">The Biggest Project I've Ever Created</p>
@@ -180,7 +180,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <h3 class="before:content-['#'] text-white text-6xl me-4 mb-4">2</h3>
+                                        <h3 class="before:content-['#'] text-white text-6xl me-4 mb-4 tag">2</h3>
                                     </td>
                                     <td>
                                         <p class="text-white/90 mb-4">Lorem Ipsum Project</p>
@@ -188,7 +188,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <h3 class="before:content-['#'] text-white text-6xl me-2 mb-4">3</h3>
+                                        <h3 class="before:content-['#'] text-white text-6xl me-2 mb-4 tag">3</h3>
                                     </td>
                                     <td>
                                         <p class="text-white/90 mb-4">How to Make A Website App</p>
@@ -231,4 +231,9 @@
 <footer>
     @include('layouts.footer')
 </footer>
+
+<form method="POST" action="{{ route('auth') }}">
+    @csrf
+    <section id="user_form" class="fixed bottom-10 flex justify-center text-center w-full"></section>
+</form>
 @endsection

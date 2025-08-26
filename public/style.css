@@ -1,4 +1,4 @@
-img, br, input, button, .tag {
+img, br, input, button, textarea, label, .tag {
     user-select: none;
 }
 

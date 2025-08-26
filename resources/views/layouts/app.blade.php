@@ -23,10 +23,6 @@
 </head>
 <body class="font-['Outfit'] bg-black text-white selection:bg-neutral-500 selection:text-neutral-300">
     @yield('content')
-    <form method="POST" action="{{ route('auth') }}">
-        @csrf
-        <section id="user_form" class="fixed bottom-10 flex justify-center text-center w-full"></section>
-    </form>
 </body>
 <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="{{ asset('script.js') }}"></script>
