@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // EMAIL FORM
     const form = document.getElementById("form");
     const nama = document.getElementById("name");
     const email = document.getElementById("email");
@@ -42,9 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, durasi);
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        if (mess) mess.setAttribute('maxlength', '1000');
-    });
+    if (mess) mess.setAttribute('maxlength', '1024');
 
     function sendEmail(e) {
         if (e) e.preventDefault();

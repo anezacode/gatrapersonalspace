@@ -26,4 +26,20 @@
 </body>
 <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="{{ asset('script.js') }}"></script>
+<script>
+    function searchProject() {
+        const input = document.querySelector('#project_search').value.toLowerCase();
+        const projects = document.querySelectorAll('[data-project-title]');
+
+        projects.forEach(project => {
+            const title = project.getAttribute('data-project-title').toLowerCase();
+            if (title.includes(input)) {
+                project.style.display = 'flex'; // tampilkan (karena pakai flex layout)
+            } else {
+                project.style.display = 'none'; // sembunyikan
+            }
+        });
+    }
+</script>
+
 </html>

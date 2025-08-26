@@ -87,47 +87,5 @@ class DatabaseSeeder extends Seeder
                 'created_at' => now()
             ],
         ]);
-
-        Project::insert([
-            [
-                'id' => '550e8400-e29b-41d4-a716-446655440000',
-                'title' => 'Hello World',
-                'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec gravida sem. Sed et ultricies nisl. In id ex laoreet, pharetra orci et, consequat mauris. Integer dictum libero id lobortis mollis. Morbi volutpat magna rutrum efficitur elementum. Nam nec felis elit. Maecenas vel tristique urna.',
-                'cover' => 'images/project-profile.png',
-                'created_at' => '2025-07-01'
-            ],
-            [
-                'id' => '0895eb9d-857a-4bcf-910d-3901e5b13db1',
-                'title' => 'Hello World',
-                'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec gravida sem. Sed et ultricies nisl. In id ex laoreet, pharetra orci et, consequat mauris. Integer dictum libero id lobortis mollis. Morbi volutpat magna rutrum efficitur elementum. Nam nec felis elit. Maecenas vel tristique urna.',
-                'cover' => 'images/project-profile.png',
-                'created_at' => '2025-07-13'
-            ],
-            [
-                'id' => '8afad888-ed98-48ab-ad70-967fbab4d0c2',
-                'title' => 'Hello World',
-                'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec gravida sem. Sed et ultricies nisl. In id ex laoreet, pharetra orci et, consequat mauris. Integer dictum libero id lobortis mollis. Morbi volutpat magna rutrum efficitur elementum. Nam nec felis elit. Maecenas vel tristique urna.',
-                'cover' => 'images/project-profile.png',
-                'created_at' => '2025-07-28'
-            ],
-        ]);
-        
-        Protag::insert([
-            [
-                'project_id' => '550e8400-e29b-41d4-a716-446655440000',
-                'tag_id' => 1,
-                'created_at' => now()
-            ],
-            [
-                'project_id' => '0895eb9d-857a-4bcf-910d-3901e5b13db1',
-                'tag_id' => 1,
-                'created_at' => now()
-            ],
-            [
-                'project_id' => '8afad888-ed98-48ab-ad70-967fbab4d0c2',
-                'tag_id' => 1,
-                'created_at' => now()
-            ],
-        ]);
     }
 }

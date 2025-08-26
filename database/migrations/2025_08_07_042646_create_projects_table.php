@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('title');
             $table->longText('content');
             $table->string('cover')->nullable();
+            $table->unsignedbigInteger('views');
             $table->softDeletes();
             $table->timestamps();
         });

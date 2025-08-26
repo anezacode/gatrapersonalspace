@@ -79,12 +79,12 @@
         </div>
     </section>
 
-    <section id="project" class="w-full min-h-screen bg-gradient-to-b from-neutral-900 to-neutral-950 flex items-center justify-center py-10">
+    <section id="project" class="w-full min-h-screen bg-gradient-to-b from-neutral-900 to-neutral-950 flex items-start justify-center pt-40 pb-10">
         <div class="projects w-full max-w-3/4 flex flex-col items-center">
             <div class="flex flex-col lg:flex-row gap-12 justify-between w-full anim-open3">
-                <div class="flex flex-col items-center gap-10 lg:gap-6">
+                <div class="w-full flex flex-col items-center gap-10 lg:gap-6">
                     @forelse ($projects as $pj)
-                        <div class="flex flex-col lg:flex-row items-center gap-4">
+                        <div class="flex flex-col lg:flex-row items-center gap-4" data-project-title="{{ $pj->title }}"">
                             <img class="w-50 h-50 rounded-md hidden lg:inline" draggable="false" loading="lazy" src="{{ $pj->cover }}">
                             <div class="flex flex-col gap-2">
                                 <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-2">
@@ -95,7 +95,7 @@
                                             <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-{{ $pt->bgcolor }}-600 px-3 py-1 rounded-full">{{ $pt->name }}</span>
                                         @endforeach
                                     </div>
-                                    <span class="text-white/50 w-full lg:w-fit">{{ $pj->updated_at ?? $pj->created_at->format('F jS Y') }}</span>
+                                    <span class="text-white/50 w-full lg:w-fit">{{ $pj->updated_at ? $pj->updated_at->format('F jS Y') : $pj->created_at->format('F jS Y') }}</span>
                                 </div>
                                 <p class="text-white/75 text-justify lg:text-start text-sm lg:text-lg">{{ $pj->content }}</p>
                             </div>
@@ -111,7 +111,7 @@
                                     </div>
                                     <span class="text-white/50 w-full lg:w-fit">July 28th 2025</span>
                                 </div>
-                                <p class="text-white/75 text-justify lg:text-start text-sm lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec gravida sem. Sed et ultricies nisl. In id ex laoreet, pharetra orci et, consequat mauris. Integer dictum libero id lobortis mollis. Morbi volutpat magna rutrum efficitur elementum. Nam nec felis elit. Maecenas vel tristique urna.</p>
+                                <p class="text-white/75 text-justify lg:text-start text-sm lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec gravida sem. Sed et ultricies nisl. In id ex laoreet, pharetra orci et, consequat mauris.</p>
                             </div>
                         </div>
                         <div class="flex flex-col lg:flex-row items-center gap-4">
@@ -124,7 +124,7 @@
                                     </div>
                                     <span class="text-white/50 w-full lg:w-fit">July 13rd 2025</span>
                                 </div>
-                                <p class="text-white/75 text-justify lg:text-start text-sm lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec gravida sem. Sed et ultricies nisl. In id ex laoreet, pharetra orci et, consequat mauris. Integer dictum libero id lobortis mollis. Morbi volutpat magna rutrum efficitur elementum. Nam nec felis elit. Maecenas vel tristique urna.</p>
+                                <p class="text-white/75 text-justify lg:text-start text-sm lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec gravida sem. Sed et ultricies nisl. In id ex laoreet, pharetra orci et, consequat mauris.</p>
                             </div>
                         </div>
                         <div class="flex flex-col lg:flex-row items-center gap-4">
@@ -135,21 +135,21 @@
                                         <h3 class="text-white text-2xl lg:text-3xl font-medium">Hello World</h3>
                                         <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-red-600 px-3 py-1 rounded-full">Laravel</span>
                                     </div>
-                                    <span class="text-white/50 w-full lg:w-fit0">July 1st 2025</span>
+                                    <span class="text-white/50 w-full lg:w-fit">July 1st 2025</span>
                                 </div>
-                                <p class="text-white/75 text-justify lg:text-start text-sm lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec gravida sem. Sed et ultricies nisl. In id ex laoreet, pharetra orci et, consequat mauris. Integer dictum libero id lobortis mollis. Morbi volutpat magna rutrum efficitur elementum. Nam nec felis elit. Maecenas vel tristique urna.</p>
+                                <p class="text-white/75 text-justify lg:text-start text-sm lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec gravida sem. Sed et ultricies nisl. In id ex laoreet, pharetra orci et, consequat mauris.</p>
                             </div>
                         </div>
                     @endforelse
                 </div>
-                <div class="w-full lg:w-3xl">
-                    <div class="flex flex-col items-center gap-8 lg:gap-12">
+                <div class="w-full lg:w-2xl">
+                    <div class="flex flex-col items-center gap-8 lg:gap-10">
                         <div class="relative z-0 w-full group">
-                            <input type="text" name="project_search" id="project_search" placeholder=" " required class="block w-full text-lg py-2 ps-8 text-white/75 bg-transparent border-b border-white/75 appearance-none focus:outline-none focus:ring-0 focus:border-white peer transition duration-300"/>
+                            <input type="text" name="project_search" id="project_search" placeholder=" " oninput="searchProject()" required class="block w-full text-lg py-2 ps-8 text-white/75 bg-transparent border-b border-white/75 appearance-none focus:outline-none focus:ring-0 focus:border-white peer transition duration-300"/>
                             <label for="project_search" class="absolute text-lg text-white/50 duration-300 -translate-y-6 transform start-8 scale-75 font-normal top-2.5 -z-10 origin-[0] peer-focus:start-8 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Search My Project</label>
                             <img src="{{ asset('icons/icons8-search.svg') }}" class="absolute top-3 w-6 h-6 text-white opacity-75 transition-opacity duration-300 peer-placeholder-shown:opacity-75 peer-focus:opacity-100" />
                         </div>
-                        <p class="text-white text-end w-full">Showing 3 of {{ $projects->count() }} Projects</p>
+                        <p class="text-white text-end w-full text-sm lg:text-base">Showing 3 of {{ $projects->count() }} Projects</p>
                         <div class="flex-3 items-center gap-2 w-full select-none">
                             @forelse ($tags as $t)
                                 <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-{{ $t->bgcolor }}-600 rounded-full">{{ $t->name }}</span>
@@ -159,31 +159,42 @@
                                 <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Roblox</span>
                             @endforelse
                         </div>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h3 class="before:content-['#'] text-white text-6xl mb-2 lg:mb-5">1</h3>
-                                </td>
-                                <td>
-                                    <p class="text-white/90 ms-5 mb-0 lg:mb-5">The Biggest Project I've Ever Created</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="before:content-['#'] text-white text-6xl mb-2 lg:mb-5">2</h3>
-                                </td>
-                                <td>
-                                    <p class="text-white/90 ms-5 mb-0 lg:mb-5">Lorem Ipsum Project</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="before:content-['#'] text-white text-6xl mb-2 lg:mb-5">3</h3>
-                                </td>
-                                <td>
-                                    <p class="text-white/90 ms-5 mb-0 lg:mb-5">How to Make A Website App</p>
-                                </td>
-                            </tr>
+                        <table class="w-full h-full flex flex-nowrap gap-4 mt-10">
+                            @forelse ($projects->slice(0, 3)->sortByDesc('views') as $pj)
+                                <tr>
+                                    <td>
+                                        <h3 class="before:content-['#'] text-white text-6xl me-4 mb-4">{{ $loop->iteration }}</h3>
+                                    </td>
+                                    <td>
+                                        <p class="text-white/90 mb-4">{{ $pj->title }}</p>
+                                    </td>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td>
+                                        <h3 class="before:content-['#'] text-white text-6xl me-4 mb-4">1</h3>
+                                    </td>
+                                    <td>
+                                        <p class="text-white/90 mb-4">The Biggest Project I've Ever Created</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h3 class="before:content-['#'] text-white text-6xl me-4 mb-4">2</h3>
+                                    </td>
+                                    <td>
+                                        <p class="text-white/90 mb-4">Lorem Ipsum Project</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h3 class="before:content-['#'] text-white text-6xl me-2 mb-4">3</h3>
+                                    </td>
+                                    <td>
+                                        <p class="text-white/90 mb-4">How to Make A Website App</p>
+                                    </td>
+                                </tr>
+                            @endforelse
                         </table>
                     </div>
                 </div>
@@ -211,7 +222,7 @@
                     <label for="message" class="absolute text-lg text-white/75 duration-300 -translate-y-6 transform scale-75 font-normal top-2.5 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Message</label>
                     <span class="text-white/50">Max 1024 words.</span>
                 </div>
-                <button id="send" type="submit" onclick="sendEmail()" class="text-white/75 cursor-pointer hover:text-white bg-transparent text-lg border-2 border-white/75 hover:bg-white/20 focus:outline-none font-bold tracking-wide rounded-sm w-full py-2 text-center opacity-100 disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-white/75 disabled:cursor-not-allowed" disabled>Send Letter</button>
+                <button id="send" type="submit" onclick="sendEmail()" class="text-white/75 cursor-pointer hover:text-white bg-transparent text-lg border-2 border-white/75 hover:bg-white/20 focus:outline-none font-medium tracking-wide rounded-sm w-full py-2 text-center opacity-100 disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-white/75 disabled:cursor-not-allowed" disabled>Send Letter</button>
             </form>  
         </div>
     </section>

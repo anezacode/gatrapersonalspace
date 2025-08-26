@@ -100,7 +100,7 @@ img, br, input, button, .tag {
     16% { margin-top: 0; }
     100% { margin-top: 0; }
 }
-
+/* 
 .mains {
     animation: mains linear;
     animation-timeline: scroll();
@@ -327,4 +327,4 @@ img, br, input, button, .tag {
             scale: 1 1;
         }
     }    
-}
+} */
