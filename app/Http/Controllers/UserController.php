@@ -33,7 +33,7 @@ class UserController extends Controller
 
     public function admin() {
         if (!Auth::check()) {
-            return redirect()->route('main');
+            abort(404);
         }
         
         $app = App::first();

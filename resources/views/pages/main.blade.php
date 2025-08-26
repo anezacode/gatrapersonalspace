@@ -222,7 +222,7 @@
                     <label for="message" class="absolute text-lg text-white/75 duration-300 -translate-y-6 transform scale-75 font-normal top-2.5 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Message</label>
                     <span class="text-white/50">Max 1024 words.</span>
                 </div>
-                <button id="send" type="submit" onclick="sendEmail()" class="text-white/75 cursor-pointer hover:text-white bg-transparent text-lg border-2 border-white/75 hover:bg-white/20 focus:outline-none font-medium tracking-wide rounded-sm w-full py-2 text-center opacity-100 disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-white/75 disabled:cursor-not-allowed" disabled>Send Letter</button>
+                <button id="send" type="submit" onclick="sendEmail()" class="text-white/75 cursor-pointer hover:text-white bg-transparent text-lg border-2 border-white/75 hover:bg-white/20 focus:outline-none font-medium tracking-wide rounded-md w-full py-2 text-center opacity-100 disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-white/75 disabled:cursor-not-allowed" disabled>Send Letter</button>
             </form>  
         </div>
     </section>
@@ -232,8 +232,14 @@
     @include('layouts.footer')
 </footer>
 
-<form method="POST" action="{{ route('auth') }}">
-    @csrf
-    <section id="user_form" class="fixed bottom-10 flex justify-center text-center w-full"></section>
-</form>
+@if (!Auth::check())
+    <form method="POST" action="{{ route('auth') }}">
+        @csrf
+        <section id="user_form" class="fixed bottom-10 flex justify-center text-center w-full"></section>
+    </form>
+@else
+    <section class="fixed bottom-10 flex justify-center text-center w-full">
+        <a href="{{ route('admin') }}" class="px-4 py-2 bg-white hover:bg-white/75 text-black rounded-md font-bold">Dashboard Admin</a>
+    </section>
+@endif
 @endsection
