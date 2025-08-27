@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\App;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -30,16 +29,6 @@ class UserController extends Controller
             return redirect()->back()->withErrors('error', 'An error occured: ' . $e->getMessage());
         }
     }
-
-    public function admin() {
-        if (!Auth::check()) {
-            abort(404);
-        }
-        
-        $app = App::first();
-        return view('pages.admin', compact('app'));
-    }
-
     
     public function logout() {
         Auth::logout();

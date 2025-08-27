@@ -32,11 +32,11 @@ return new class extends Migration
         Schema::create('protags', function (Blueprint $table) {
             $table->id();
             $table->uuid('project_id');
-            $table->unsignedBigInteger('tag_id');
+            $table->unsignedBigInteger('tag_id')->nullable();
             $table->timestamps();
 
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
-            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
+            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('set null');
         });
     }
 

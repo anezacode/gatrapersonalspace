@@ -16,8 +16,8 @@
                     </form>
                 </div>
             </div>
-            <div class="w-full grid grid-cols-1 items-center gap-4">
-                <h2 class="text-xl font-medium">Admin Panel</h2>
+            <div class="w-full flex flex-col items-center gap-4">
+                <h2 class="text-xl font-medium w-full">Admin Panel</h2>
                 <a href="#" class="w-full border border-white/75 text-white/75 hover:text-white bg-transparent hover:bg-white/20 transition p-4 flex items-center select-none justify-between">
                     <div class="flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
@@ -86,9 +86,34 @@
                     </svg>                      
                 </a>
             </div>
-            <div class="w-full flex items-center justify-between">
-                <div class="w-full flex flex-col gap-4">
-                    <h2 class="text-xl font-medium">Website Preview</h2>
+            <div class="w-full flex flex-col items-center justify-between gap-4">
+                <h2 class="text-xl font-medium w-full">Project Tags</h2>
+                <div class="flex-3 items-center gap-2 w-full select-none">
+                    @forelse ($tags as $t)
+                        <div class="tag inline-flex items-center w-fit before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-{{ $t->bgcolor }}-600 rounded-full">
+                            {{ $t->name }}
+                            <div class="flex items-center before:content-['|'] before:mx-2">
+                                <form action="#" method="POST" class="flex items-center">
+                                    <button type="submit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                                        </svg>                                      
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    @empty       
+                        {{-- <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-red-600 rounded-full">Laravel</div>
+                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-blue-600 rounded-full">Tailwind</div>
+                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Roblox</div> --}}
+                    @endforelse
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+            <div class="w-full flex flex-col items-center justify-between gap-4">
+                    <h2 class="text-xl font-medium w-full">Website Preview</h2>
                     <iframe sandbox src="{{ route('main') }}" frameborder="0" height="1000" style="zoom: 0.75" class="select-none w-full border border-white/75"></iframe>
                 </div>
             </div>

@@ -145,7 +145,7 @@
                 <div class="w-full lg:w-2xl">
                     <div class="flex flex-col items-center gap-8 lg:gap-10">
                         <div class="relative z-0 w-full group">
-                            <input type="text" name="project_search" id="project_search" placeholder=" " onkeyup="searchProject()" required class="block w-full text-lg py-2 ps-8 text-white/75 bg-transparent border-b border-white/75 appearance-none focus:outline-none focus:ring-0 focus:border-white peer transition duration-300"/>
+                            <input type="text" name="project_search" autocomplete="off" id="project_search" placeholder=" " onkeyup="searchProject()" required class="block w-full text-lg py-2 ps-8 text-white/75 bg-transparent border-b border-white/75 appearance-none focus:outline-none focus:ring-0 focus:border-white peer transition duration-300"/>
                             <label for="project_search" class="absolute text-lg text-white/50 duration-300 -translate-y-6 transform start-8 scale-75 font-normal top-2.5 -z-10 origin-[0] peer-focus:start-8 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Search My Project</label>
                             <img src="{{ asset('icons/icons8-search.svg') }}" class="absolute top-3 w-6 h-6 text-white opacity-75 transition-opacity duration-300 peer-placeholder-shown:opacity-75 peer-focus:opacity-100" />
                         </div>
