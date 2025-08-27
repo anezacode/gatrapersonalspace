@@ -13,8 +13,7 @@ function searchProject() {
 
     const field = `
         <div class="relative z-0 mb-5 group">
-            <input type="password" name="password" id="password" class="block w-full text-lg py-2 text-white/75 bg-transparent border-b border-white/75 appearance-none focus:outline-none focus:ring-0 focus:border-white peer transition duration-300" placeholder=" " required />
-            <label for="password" class="absolute text-lg text-white/75 duration-300 -translate-y-6 transform scale-75 start-0 font-normal top-2.5 -z-10 origin-[0] rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">?</label>
+            <input type="password" name="password" id="password" class="border text-sm rounded-lg block w-full p-2.5 bg-neutral-900 border-white/20 placeholder-white/75 text-white" placeholder="?" required />
         </div>
     `;
 
