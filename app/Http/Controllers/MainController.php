@@ -9,7 +9,7 @@ use App\Models\Project;
 use App\Models\Protag;
 use App\Models\Tag;
 
-class AppController extends Controller
+class MainController extends Controller
 {
     public function main() {
         $app = App::first();

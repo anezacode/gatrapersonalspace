@@ -108,8 +108,13 @@
                         <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Roblox</div> --}}
                     @endforelse
                 </div>
-                <div>
-                    
+                <div class="w-full mt-2">
+                    <form action="#" method="POST">
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input type="text" name="subject" id="subject" class="block w-full text-lg py-2 text-white/75 bg-transparent border-b border-white/75 appearance-none focus:outline-none focus:ring-0 focus:border-white peer transition duration-300" placeholder=" " required />
+                            <label for="subject" class="absolute text-base text-white/75 duration-300 -translate-y-6 transform scale-75 font-normal top-2.5 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Insert new Tag</label>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="w-full flex flex-col items-center justify-between gap-4">
