@@ -12,7 +12,7 @@
                 <div>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button class="cursor-pointer hover:underline py-2 hover:text-red-400" type="submit">Logout</button>
+                        <button class="cursor-pointer hover:underline py-2 hover:text-white/75" type="submit">Logout</button>
                     </form>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 <a href="#" class="w-full border border-white/75 text-white/75 hover:text-white bg-transparent hover:bg-white/20 transition p-4 flex items-center select-none justify-between">
                     <div class="flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6ZM7.5 6h.008v.008H7.5V6Zm2.25 0h.008v.008H9.75V6Z" />
                         </svg>                          
                         <h3 class="text-lg font-bold tracking-wider">Home Section</h3>
                     </div>
@@ -32,7 +32,7 @@
                 <a href="#" class="w-full border border-white/75 text-white/75 hover:text-white bg-transparent hover:bg-white/20 transition p-4 flex items-center select-none justify-between">
                     <div class="flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6ZM7.5 6h.008v.008H7.5V6Zm2.25 0h.008v.008H9.75V6Z" />
                         </svg>                          
                         <h3 class="text-lg font-bold tracking-wider">About Section</h3>
                     </div>
@@ -43,7 +43,7 @@
                 <a href="#" class="w-full border border-white/75 text-white/75 hover:text-white bg-transparent hover:bg-white/20 transition p-4 flex items-center select-none justify-between">
                     <div class="flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6ZM7.5 6h.008v.008H7.5V6Zm2.25 0h.008v.008H9.75V6Z" />
                         </svg>                          
                         <h3 class="text-lg font-bold tracking-wider">Project Section</h3>
                     </div>
@@ -54,7 +54,7 @@
                 <a href="#" class="w-full border border-white/75 text-white/75 hover:text-white bg-transparent hover:bg-white/20 transition p-4 flex items- select-none justify-between">
                     <div class="flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6ZM7.5 6h.008v.008H7.5V6Zm2.25 0h.008v.008H9.75V6Z" />
                         </svg>                          
                         <h3 class="text-lg font-bold tracking-wider">Contact Section</h3>
                     </div>
@@ -88,13 +88,14 @@
             </div>
             <div class="w-full flex flex-col items-center justify-between gap-4">
                 <h2 class="text-xl font-medium w-full">Project Tags</h2>
-                <div class="flex-3 items-center gap-2 w-full select-none">
+                <div class="flex flex-wrap items-center gap-2 w-full select-none">
                     @forelse ($tags as $t)
-                        <div class="tag inline-flex items-center w-fit before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-{{ $t->bgcolor }}-600 rounded-full">
+                        <div class="tag inline-flex items-center w-fit before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 bg-gray-600 rounded-full">
                             {{ $t->name }}
                             <div class="flex items-center before:content-['|'] before:mx-2">
-                                <form action="#" method="POST" class="flex items-center">
-                                    <button type="submit">
+                                <form action="{{ route('delete-tag', $t->id) }}" method="POST" class="flex items-center">
+                                    @csrf
+                                    <button type="submit" class="cursor-pointer hover:text-white/75 transition">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
                                         </svg>                                      
@@ -103,17 +104,26 @@
                             </div>
                         </div>
                     @empty       
-                        {{-- <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-red-600 rounded-full">Laravel</div>
-                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-blue-600 rounded-full">Tailwind</div>
+                        {{-- <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Laravel</div>
+                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Tailwind</div>
                         <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Roblox</div> --}}
                     @endforelse
                 </div>
                 <div class="w-full mt-2">
-                    <form action="#" method="POST">
-                        <div class="relative z-0 w-full mb-5 group">
-                            <input type="text" name="subject" id="subject" class="block w-full text-lg py-2 text-white/75 bg-transparent border-b border-white/75 appearance-none focus:outline-none focus:ring-0 focus:border-white peer transition duration-300" placeholder=" " required />
-                            <label for="subject" class="absolute text-base text-white/75 duration-300 -translate-y-6 transform scale-75 font-normal top-2.5 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Insert new Tag</label>
+                    <form action="{{ route('insert-tag') }}" method="POST" class="w-full inline-flex gap-4">
+                        @csrf
+                        <div class="relative z-0 w-full group">
+                            <input type="text" name="insert_tag" autocomplete="off" id="insert_tag" placeholder=" " required class="block w-full text-lg py-2 ps-8 text-white/75 bg-transparent border-b border-white/75 appearance-none focus:outline-none focus:ring-0 focus:border-white peer transition duration-300"/>
+                            <label for="insert_tag" class="absolute text-lg text-white/50 duration-300 -translate-y-6 transform start-8 scale-75 font-normal top-2.5 -z-10 origin-[0] peer-focus:start-8 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Insert New Tag</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="absolute top-3 w-6 h-6 text-white opacity-75 transition-opacity duration-300 peer-placeholder-shown:opacity-75 peer-focus:opacity-100">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5" />
+                            </svg>
                         </div>
+                        <button type="submit" class="border border-white/75 text-white/75 hover:text-white bg-transparent hover:bg-white/20 transition w-20 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-center w-full">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                            </svg>                              
+                        </button>
                     </form>
                 </div>
             </div>
@@ -129,4 +139,18 @@
 <footer>
     @include('layouts.footer')
 </footer>
+
+@if ($errors->any())
+    <div class="fixed bottom-4 right-4 z-50">
+        <div class="bg-red-600 text-white p-4 rounded-lg shadow-lg max-w-sm">
+            <h3 class="font-bold text-lg mb-2">Terjadi Kesalahan!</h3>
+            <ul class="list-disc list-inside">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
+@endif
+
 @endsection

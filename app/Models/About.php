@@ -11,5 +11,15 @@ class About extends Model
     use HasFactory, Notifiable;
 
     protected $table = 'abouts';
-    protected $fillable = ['title', 'description', 'icon'];
+
+    protected $fillable = [
+        'title',
+        'description',
+        'icon'
+    ];
+
+    protected $casts = [
+        'title' => 'string',
+        'icon' => 'string'
+    ];
 }

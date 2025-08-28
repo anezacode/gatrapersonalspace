@@ -1,10 +1,14 @@
 const keyword = 'admin';
 
-const panel = document.getElementById("panel");
-panel.removeAttribute('disabled');
+const panel = document.getElementById('panel');
+if (panel) {
+    panel.removeAttribute('disabled');
+}
 
-const submit = document.getElementById("send");
-submit.removeAttribute('disabled');
+const submit = document.querySelector('#send');
+if (submit) {
+    submit.removeAttribute('disabled');
+}
 
 // SEARCH BAR
 function searchProject() {
@@ -35,11 +39,11 @@ function searchProject() {
 }
 
 // EMAIL FORM
-const form = document.getElementById("form");
-const nama = document.getElementById("name");
-const email = document.getElementById("email");
-const subject = document.getElementById("subject");
-const mess = document.getElementById("message");
+const form = document.getElementById('form');
+const nama = document.getElementById('name');
+const email = document.getElementById('email');
+const subject = document.getElementById('subject');
+const mess = document.getElementById('message');
 
 const icon = `
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

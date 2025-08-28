@@ -20,6 +20,8 @@ class Project extends Model
 
     protected $casts = [
         'id' => 'string',
+        'title' => 'string',
+        'cover' => 'string',
     ];
 
     /**

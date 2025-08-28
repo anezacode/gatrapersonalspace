@@ -69,21 +69,18 @@ class DatabaseSeeder extends Seeder
                 'id' => 1,
                 'name' => 'Laravel',
                 'is_active' => true,
-                'bgcolor' => 'red',
                 'created_at' => now()
             ],
             [
                 'id' => 2,
                 'name' => 'Tailwind',
                 'is_active' => true,
-                'bgcolor' => 'blue',
                 'created_at' => now()
             ],
             [
                 'id' => 3,
                 'name' => 'Roblox',
                 'is_active' => true,
-                'bgcolor' => 'gray',
                 'created_at' => now()
             ],
         ]);

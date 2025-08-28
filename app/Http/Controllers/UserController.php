@@ -23,7 +23,7 @@ class UserController extends Controller
     
                 return redirect()->route('admin');
             } else {
-                return redirect()->back()->withErrors(['error' => 'Wrong password.']);
+                return redirect()->back()->withErrors(['error' => 'An error occured.']);
             }
         } catch (\Exception $e) {
             return redirect()->back()->withErrors('error', 'An error occured: ' . $e->getMessage());

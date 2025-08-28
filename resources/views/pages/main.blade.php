@@ -107,7 +107,7 @@
                                 <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-2">
                                     <div class="flex items-center gap-2">
                                         <h3 class="text-white text-2xl lg:text-3xl font-medium">Hello World</h3>
-                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-red-600 px-3 py-1 rounded-full">Laravel</span>
+                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-gray-600 px-3 py-1 rounded-full">Laravel</span>
                                     </div>
                                     <span class="text-white/50 w-full lg:w-fit">July 28th 2025</span>
                                 </div>
@@ -120,7 +120,7 @@
                                 <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-2">
                                     <div class="flex items-center gap-2">
                                         <h3 class="text-white text-2xl lg:text-3xl font-medium">Hello World</h3>
-                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-red-600 px-3 py-1 rounded-full">Laravel</span>
+                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-gray-600 px-3 py-1 rounded-full">Laravel</span>
                                     </div>
                                     <span class="text-white/50 w-full lg:w-fit">July 13rd 2025</span>
                                 </div>
@@ -133,7 +133,7 @@
                                 <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-2">
                                     <div class="flex items-center gap-2">
                                         <h3 class="text-white text-2xl lg:text-3xl font-medium">Hello World</h3>
-                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-red-600 px-3 py-1 rounded-full">Laravel</span>
+                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-gray-600 px-3 py-1 rounded-full">Laravel</span>
                                     </div>
                                     <span class="text-white/50 w-full lg:w-fit">July 1st 2025</span>
                                 </div>
@@ -150,13 +150,13 @@
                             <img src="{{ asset('icons/icons8-search.svg') }}" class="absolute top-3 w-6 h-6 text-white opacity-75 transition-opacity duration-300 peer-placeholder-shown:opacity-75 peer-focus:opacity-100" />
                         </div>
                         <p class="text-white text-end w-full text-sm lg:text-base">Showing 3 of {{ $projects->count() }} Projects</p>
-                        <div class="flex-3 items-center gap-2 w-full select-none">
+                        <div class="flex flex-wrap items-center gap-2 w-full select-none">
                             @forelse ($tags as $t)
-                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-{{ $t->bgcolor }}-600 rounded-full">{{ $t->name }}</span>
-                            @empty                            
-                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-red-600 rounded-full">Laravel</span>
-                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-blue-600 rounded-full">Tailwind</span>
-                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Roblox</span>
+                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 bg-gray-600 rounded-full">{{ $t->name }}</span>
+                            @empty                     
+                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 bg-gray-600 rounded-full">Laravel</span>
+                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 bg-gray-600 rounded-full">Tailwind</span>
+                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 bg-gray-600 rounded-full">Roblox</span>
                             @endforelse
                         </div>
                         <table class="w-full h-full flex flex-nowrap gap-4 mt-10">
@@ -220,9 +220,9 @@
                 <div class="relative z-0 w-full mb-5 group">
                     <textarea name="message" id="message" class="mb-1 block w-full text-lg py-2 text-white/75 bg-transparent border-b border-white/75 appearance-none focus:outline-none focus:ring-0 focus:border-white peer transition duration-300 min-h-12 h-36 max-h-64" placeholder=" " maxlength="1024" required></textarea>
                     <label for="message" class="absolute text-lg text-white/75 duration-300 -translate-y-6 transform scale-75 font-normal top-2.5 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Message</label>
-                    <span class="text-white/50">Max 1024 words.</span>
+                    <span class="text-white/50 text-sm">Max 1024 words.</span>
                 </div>
-                <button id="send" type="submit" onclick="sendEmail()" class="text-white/75 cursor-pointer hover:text-white bg-transparent text-lg border-1 border-white/75 hover:bg-white/20 focus:outline-none font-medium tracking-wide w-full py-2 text-center" disabled>Send Letter</button>
+                <button id="send" type="submit" onclick="sendEmail()" class="transition text-white/75 cursor-pointer hover:text-white bg-transparent text-lg border-1 border-white/75 hover:bg-white/20 focus:outline-none font-medium tracking-wide w-full py-2 text-center disabled:cursor-not-allowed" disabled>Send Letter</button>
             </form>  
         </div>
     </section>
