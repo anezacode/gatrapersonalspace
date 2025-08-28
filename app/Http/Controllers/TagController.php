@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class TagController extends Controller
 {
-    public function insertTag(Request $request) {
+    public function insert(Request $request) {
         if (!Auth::check()) {
             abort(404);
         }
@@ -35,7 +35,7 @@ class TagController extends Controller
         }
     }
 
-    public function toggleTag($id) {  
+    public function toggle($id) {  
         if (!Auth::check()) {
             abort(404);
         }
@@ -60,7 +60,7 @@ class TagController extends Controller
         }
     }
 
-    public function deleteTag($id) {
+    public function delete($id) {
         if (!Auth::check()) {
             abort(404);
         }

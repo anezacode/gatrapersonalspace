@@ -74,7 +74,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
                 </a>
-                <a href="#" class="w-full border border-white/75 text-white/75 hover:text-white bg-transparent hover:bg-white/20 transition p-4 flex items-center select-none justify-between">
+                <a href="{{ route('account-settings') }}" class="w-full border border-white/75 text-white/75 hover:text-white bg-transparent hover:bg-white/20 transition p-4 flex items-center select-none justify-between">
                     <div class="flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -120,9 +120,9 @@
                             </div>
                         </div>
                     @empty       
-                        {{-- <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Laravel</div>
-                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Tailwind</div>
-                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Roblox</div> --}}
+                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-red-600 rounded-full">Laravel</div>
+                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-blue-600 rounded-full">Tailwind</div>
+                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Roblox</div>
                     @endforelse
                 </div>
                 <div class="w-full mt-2">

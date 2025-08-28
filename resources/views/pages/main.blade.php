@@ -79,7 +79,7 @@
         </div>
     </section>
 
-    <section id="project" class="w-full min-h-screen bg-gradient-to-b from-neutral-900 to-neutral-950 flex items-start justify-center pt-40 pb-10">
+    <section id="project" class="w-full min-h-screen bg-gradient-to-b from-neutral-900 to-neutral-950 flex items-center justify-center py-10">
         <div class="projects w-full max-w-3/4 flex flex-col items-center">
             <div class="flex flex-col lg:flex-row gap-12 justify-between w-full anim-open3">
                 <div class="w-full flex flex-col items-center gap-10 lg:gap-6">
@@ -92,7 +92,7 @@
                                         <h3 class="text-white text-2xl lg:text-3xl font-medium">{{ $pj->title }}</h3>
                                         @foreach ($pj->protags as $protags)
                                             @php $pt = $tags->firstWhere('id', $protags->tag_id) @endphp
-                                            <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-{{ $pt->bgcolor }}-600 px-3 py-1 rounded-full">{{ $pt->name }}</span>
+                                            <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-gray-600 px-3 py-1 rounded-full">{{ $pt->name }}</span>
                                         @endforeach
                                     </div>
                                     <span class="text-white/50 w-full lg:w-fit">{{ $pj->updated_at ? $pj->updated_at->format('F jS Y') : $pj->created_at->format('F jS Y') }}</span>
@@ -107,7 +107,7 @@
                                 <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-2">
                                     <div class="flex items-center gap-2">
                                         <h3 class="text-white text-2xl lg:text-3xl font-medium">Hello World</h3>
-                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-gray-600 px-3 py-1 rounded-full">Laravel</span>
+                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-red-600 px-3 py-1 rounded-full">Laravel</span>
                                     </div>
                                     <span class="text-white/50 w-full lg:w-fit">July 28th 2025</span>
                                 </div>
@@ -120,7 +120,7 @@
                                 <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-2">
                                     <div class="flex items-center gap-2">
                                         <h3 class="text-white text-2xl lg:text-3xl font-medium">Hello World</h3>
-                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-gray-600 px-3 py-1 rounded-full">Laravel</span>
+                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-blue-600 px-3 py-1 rounded-full">Laravel</span>
                                     </div>
                                     <span class="text-white/50 w-full lg:w-fit">July 13rd 2025</span>
                                 </div>
@@ -154,8 +154,8 @@
                             @forelse ($tags as $t)
                                 <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 bg-gray-600 rounded-full">{{ $t->name }}</span>
                             @empty                     
-                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 bg-gray-600 rounded-full">Laravel</span>
-                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 bg-gray-600 rounded-full">Tailwind</span>
+                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 bg-red-600 rounded-full">Laravel</span>
+                                <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 bg-blue-600 rounded-full">Tailwind</span>
                                 <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 bg-gray-600 rounded-full">Roblox</span>
                             @endforelse
                         </div>

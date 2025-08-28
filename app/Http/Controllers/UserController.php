@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\App;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -36,13 +37,31 @@ class UserController extends Controller
     }
     
     public function logout(Request $request) {
-        Log::warning('Admin logout detected on IP Address: ' . $request->ip() . ' at: ' . now());
+        try {
+            Log::warning('Admin logout detected on IP Address: ' . $request->ip() . ' at: ' . now());
+    
+            Auth::logout();
+    
+            request()->session()->invalidate();
+            request()->session()->regenerateToken();
+            
+            return redirect()->route('main');
+        } catch (\Exception $e) {
+            Log::error('Error occured while logging out: ' . $e->getMessage());
+        }
+    }
 
-        Auth::logout();
+    public function edit() {
+        if (!Auth::check()) {
+            abort(404);
+        }
 
-        request()->session()->invalidate();
-        request()->session()->regenerateToken();
-        
-        return redirect()->route('main');
+        $app = App::first();
+        $admin = User::first();
+
+        return view('pages.admin.account', compact([
+            'app',
+            'admin'
+        ]));
     }
 }

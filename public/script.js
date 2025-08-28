@@ -27,7 +27,7 @@ function searchProject() {
     } else {
         container.innerHTML = '';
     }
-    
+    /*
     projects.forEach(project => {
         const title = project.getAttribute('data-project-title').toLowerCase();
         if (title.includes(input)) {
@@ -35,7 +35,7 @@ function searchProject() {
         } else {
             project.style.display = 'none';
         }
-    });
+    });*/
 }
 
 // EMAIL FORM

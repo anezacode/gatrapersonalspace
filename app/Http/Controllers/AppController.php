@@ -38,6 +38,7 @@ class AppController extends Controller
         
         $app = App::first();
         $tags = Tag::all();
-        return view('pages.admin', compact('app', 'tags'));
+        
+        return view('pages.admin.dashboard', compact('app', 'tags'));
     }
 }
