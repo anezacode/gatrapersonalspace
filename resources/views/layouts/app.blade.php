@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     {{-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> --}}
     @vite(['resources/css/app.css'])
-
 </head>
 <body class="font-['Outfit'] bg-black text-white selection:bg-neutral-500 selection:text-neutral-300 overflow-y-auto">
     @yield('content')

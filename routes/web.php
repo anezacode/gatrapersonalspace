@@ -12,4 +12,5 @@ Route::post('/auth', [UserController::class, 'auth'])->name('auth');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::post('/insert-tag', [TagController::class, 'insertTag'])->name('insert-tag');
+Route::post('/toggle-tag/{id}', [TagController::class, 'ToggleTag'])->name('toggle-tag');
 Route::post('/delete-tag/{id}', [TagController::class, 'deleteTag'])->name('delete-tag');

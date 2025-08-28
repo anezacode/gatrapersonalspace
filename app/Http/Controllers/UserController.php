@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class UserController extends Controller
 {
@@ -20,17 +21,23 @@ class UserController extends Controller
             $password = password_verify($request->input('password'), $admin->password);
             if ($password) {
                 Auth::login($admin);
+
+                Log::warning('Admin login detected on IP Address: ' . $request->ip() . ' at: ' . now());
     
                 return redirect()->route('admin');
             } else {
-                return redirect()->back()->withErrors(['error' => 'An error occured.']);
+                return redirect()->back();
             }
         } catch (\Exception $e) {
-            return redirect()->back()->withErrors('error', 'An error occured: ' . $e->getMessage());
+            Log::error('Error occured while logging in: ' . $e->getMessage());
+
+            return redirect()->back();
         }
     }
     
-    public function logout() {
+    public function logout(Request $request) {
+        Log::warning('Admin logout detected on IP Address: ' . $request->ip() . ' at: ' . now());
+
         Auth::logout();
 
         request()->session()->invalidate();
