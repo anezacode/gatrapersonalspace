@@ -41,4 +41,14 @@ class AppController extends Controller
         
         return view('pages.admin.dashboard', compact('app', 'tags'));
     }
+
+    public function edit() {
+        if (!Auth::check()) {
+            abort(404);
+        }
+
+        $app = App::first();
+        
+        return view('pages.admin.general', compact('app'));
+    }
 }

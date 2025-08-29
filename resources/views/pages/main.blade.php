@@ -141,6 +141,11 @@
                             </div>
                         </div>
                     @endforelse
+                    <div class="w-full">
+                        <button class="text-white/90 before:content-['<<'] before:pe-1 after:content-['>>'] after:ps-1 w-full text-right">
+                            <span class="hover:underline cursor-pointer">Load more</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="w-full lg:w-2xl">
                     <div class="flex flex-col items-center gap-8 lg:gap-10">
