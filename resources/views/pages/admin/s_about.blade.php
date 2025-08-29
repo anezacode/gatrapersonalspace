@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    account settings
+    about section
 @endsection

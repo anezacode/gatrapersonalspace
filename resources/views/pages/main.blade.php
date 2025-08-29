@@ -107,7 +107,7 @@
                                 <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-2">
                                     <div class="flex items-center gap-2">
                                         <h3 class="text-white text-2xl lg:text-3xl font-medium">Hello World</h3>
-                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-red-600 px-3 py-1 rounded-full">Laravel</span>
+                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-gray-600 px-3 py-1 rounded-full">Laravel</span>
                                     </div>
                                     <span class="text-white/50 w-full lg:w-fit">July 28th 2025</span>
                                 </div>
@@ -120,7 +120,7 @@
                                 <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-2">
                                     <div class="flex items-center gap-2">
                                         <h3 class="text-white text-2xl lg:text-3xl font-medium">Hello World</h3>
-                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-blue-600 px-3 py-1 rounded-full">Laravel</span>
+                                        <span class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base bg-gray-600 px-3 py-1 rounded-full">Laravel</span>
                                     </div>
                                     <span class="text-white/50 w-full lg:w-fit">July 13rd 2025</span>
                                 </div>

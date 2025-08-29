@@ -120,8 +120,8 @@
                             </div>
                         </div>
                     @empty       
-                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-red-600 rounded-full">Laravel</div>
-                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-blue-600 rounded-full">Tailwind</div>
+                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Laravel</div>
+                        <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Tailwind</div>
                         <div class="tag before:content-['#'] text-white/90 font-light text-sm lg:text-base px-3 py-1 mx-0.5 bg-gray-600 rounded-full">Roblox</div>
                     @endforelse
                 </div>
